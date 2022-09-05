@@ -10,6 +10,7 @@ import {
   HeaderColumn,
   Column,
   Title,
+  Button, ButtonContainer
 } from "./components/Table";
 
 const boardData = [
@@ -73,6 +74,11 @@ const Board = () => {
           </tbody>
         </Table>
       </Container>
+
+      <ButtonContainer>
+        <Button>글 쓰기</Button>
+      </ButtonContainer>
+
     </Main>
   );
 };

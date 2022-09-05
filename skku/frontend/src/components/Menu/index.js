@@ -18,7 +18,7 @@ import {
 } from "./styles";
 
 const Menu = () => {
-  const menuItems = ["About", "K-NSSE", "UICA", "Research", "Board"];
+  const menuItems = ["About", "UICA", "K-NESSE","Research", "Board"];
   const [width, setWidth] = useState(window.innerWidth);
   const [isOpen, setOpen] = useState(false);
   const updateDimensions = () => {
@@ -91,11 +91,17 @@ const Menu = () => {
                         <MenuContent to ="/uica/participate">Participate</MenuContent>
                     </MenuBox>
                     <MenuBox>
-                    <MenuContent to ="/research/publications">Publications</MenuContent>
+                    <MenuContent to ="/research/book">Book</MenuContent>
+                    <MenuContent to ="/research/conference">Conference</MenuContent>
+                    <MenuContent to ="/research/journal">Journal</MenuContent>
                     <MenuContent to ="/research/projects">Projects</MenuContent>
+
                 </MenuBox>
                 <MenuBox>
-                    <MenuContent to ="/board/notice">Notice</MenuContent>
+                    <MenuContent to ="/board/announcement">Announcement</MenuContent>
+                    <MenuContent to ="/board/report">Report</MenuContent>
+                    <MenuContent to ="/board/reference">Reference</MenuContent>
+
                 </MenuBox>
                 </MenuDrop>
                 </>

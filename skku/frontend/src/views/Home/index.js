@@ -63,7 +63,7 @@ const Home = () => {
       </Section>
       <Section background={background2}>
         <Container>
-          <SectionTitle>News</SectionTitle>
+          <SectionTitle>Announcement</SectionTitle>
           <SectionSubtitle>Updates in Global Education Group</SectionSubtitle>
           <CardviewContainer>
             {cardData.map((data, i) => (

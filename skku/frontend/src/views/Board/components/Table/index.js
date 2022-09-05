@@ -34,3 +34,25 @@ export const Column = styled.td`
   padding: 20px 0;
   text-align: ${(props) => props.textAlign ?? "center"};
 `;
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+`;
+
+export const Button = styled.button`
+  width: 188px;
+  height: 60px;
+  justify-content: center;
+  background: R141 G198 B63;
+  color: white;
+  font-size: var(--font-size-5);
+  border: none;
+  border-radius: 5px;
+
+  @media only screen and (max-width: 960px) {
+    font-size: var(--font-size-3);
+    width: 94px;
+    height: 50px;
+  }
+`;

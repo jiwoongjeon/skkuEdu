@@ -1,13 +1,11 @@
 import { Section, SectionPage, Members } from "../../components";
 
-const About = () => {
+const About_Members = () => {
   return (
     <>
-      <SectionPage />
-
-      {/* <List /> */}
+      <Members/>
     </>
   );
 };
 
-export default About;
+export default About_Members;

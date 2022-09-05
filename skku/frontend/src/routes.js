@@ -5,10 +5,14 @@ import Home from "./views/Home";
 import About from "./views/About";
 import KNSSE from "./views/KNSSE";
 import Board from "./views/Board";
+import MEMBERS from "./views/About_Members";
+
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
   { path: "/k-nsse", key: "K-NSSE", component: () => <KNSSE /> },
+  { path: "/about/members", key: "MEMBERS", component : () => <MEMBERS/>},
+
   { path: "/about", key: "ABOUT", component: () => <About /> },
   { path: "/board", key: "BOARD", component: () => <Board /> },
 ];
