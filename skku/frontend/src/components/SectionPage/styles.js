@@ -1,8 +1,18 @@
 import styled from "styled-components";
 import temp from "../../assets/images/professor.png";
 
+
+export const Main = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+
 export const Container = styled.div`
-  width: 100%;
+  margin-top:50px;
+  margin-bottom: 50px;
+  width: 95%;
   height: 600px;
   background-color: grey;
   display: flex;
@@ -13,6 +23,7 @@ export const Image = styled.img`
   width: 50%;
   height: 600px;
   background: url(${temp}) center/100% no-repeat;
+
 `;
 
 export const ContentContainer = styled.div`

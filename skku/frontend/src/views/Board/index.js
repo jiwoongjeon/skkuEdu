@@ -2,84 +2,89 @@ import React from "react";
 
 import background from "../../assets/images/mainbackground.png";
 import { Hero, Main } from "../../components";
-import {
-  Container,
-  Table,
-  Row,
-  HeaderRow,
-  HeaderColumn,
-  Column,
-  Title,
-  Button, ButtonContainer
-} from "./components/Table";
 
-const boardData = [
-  {
-    postId: 1,
-    postTitle: "Title",
-    postDate: "2021-08-1",
-    postAuthor: "관리자",
-  },
-  {
-    postId: 2,
-    postTitle: "Title",
-    postDate: "2021-08-2",
-    postAuthor: "관리자",
-  },
-  {
-    postId: 3,
-    postTitle: "Title",
-    postDate: "2021-08-3",
-    postAuthor: "관리자",
-  },
-  {
-    postId: 4,
-    postTitle: "Title",
-    postDate: "2021-08-4",
-    postAuthor: "관리자",
-  },
-];
 
-const Board = () => {
-  const heroHeight = Math.min(window.innerWidth / 2, 400);
-  return (
-    <Main>
-      <Hero background={background} height={`${heroHeight}px`} />
-      <Container>
-        <Title>Notice</Title>
-        <Table>
-          <colgroup>
-            <col style={{ width: "10%" }} />
-            <col style={{ width: "60%" }} />
-            <col style={{ width: "15%" }} />
-            <col style={{ width: "15%" }} />
-          </colgroup>
-          <thead>
-            <HeaderRow>
-              <HeaderColumn>번호</HeaderColumn>
-              <HeaderColumn>제목</HeaderColumn>
-              <HeaderColumn>날짜</HeaderColumn>
-              <HeaderColumn>작성자</HeaderColumn>
-            </HeaderRow>
-          </thead>
-          <tbody>
-            {boardData.map((data) => (
-              <Row key={data.postId}>
-                <Column>{data.postId}</Column>
-                <Column textAlign={"left"}>{data.postTitle}</Column>
-                <Column>{data.postDate}</Column>
-                <Column>{data.postAuthor}</Column>
-              </Row>
-            ))}
-          </tbody>
-        </Table>
-      </Container>
 
-      <ButtonContainer>
-        <Button>글 쓰기</Button>
-      </ButtonContainer>
+const { PostContainer, Header, PostElementContainer, SymptomsContainer, Divider, SymptomsBubble, CategoryContainer, CategoryBubble,
+  PostElement, Column1, Date, NewestLabel, DateLabel, StateLabel, OldestLabel, Title1, Content, ContentElement, State, UnState,
+ WriteButton, ColumnBottom, PageContainer, PageNumber, PageNumberContainer,
+  CategoryBubbleSelected, NewestLabelSelected, OldestLabelSelected, Announcement} = require("./styles");
 
-    </Main>
+export const Board = (props) => {
+
+    const heroHeight = Math.min(window.innerWidth / 2, 400);
+
+    function board(i) {
+        props.setBoard(props.postData[i])
+        props.setPageLoad(0)
+        props.setPostLoad(0)
+        props.setIsBoard(true)
+    }
+    return (
+        <Main>
+            <Hero background={background} height={`${heroHeight}px`} />
+
+            <PostContainer>
+
+                <Header>Recent Posts</Header>
+
+                <CategoryContainer>
+
+
+                    {!props.internalSelect && <CategoryBubble onClick={({target}) => props.setToAnnouncement()}>
+                        Announcement</CategoryBubble>}
+                    {props.internalSelect && <CategoryBubbleSelected>
+                        Announcement</CategoryBubbleSelected>}
+
+                    {!props.EBinSelect && <CategoryBubble onClick={({target}) => props.setToReport()}>
+                        Report</CategoryBubble>}
+                    {props.EBinSelect && <CategoryBubbleSelected>
+                        Report</CategoryBubbleSelected>}
+                        
+                    {!props.orthopedicsSelect && <CategoryBubble onClick={({target}) => props.setToReference()}>
+                        Reference</CategoryBubble>}
+                    {props.orthopedicsSelect && <CategoryBubbleSelected>
+                        Reference</CategoryBubbleSelected>}
+
+                        
+                </CategoryContainer>
+
+                <Column1>
+                    <ContentElement>
+                        <Column1>
+                            {props.newestSelect && <NewestLabelSelected>Newest</NewestLabelSelected>}
+                            {!props.newestSelect && <NewestLabel onClick={({target}) => props.setToNewest()}>
+                                Newest</NewestLabel>}
+
+                            {props.oldestSelect && <OldestLabelSelected>Oldest</OldestLabelSelected>}
+                            {!props.oldestSelect && <OldestLabel onClick={({target}) => props.setToOldest()}>
+                                Oldest</OldestLabel>}
+                                
+                        </Column1>
+                    </ContentElement>
+                    <DateLabel>CATEGORY</DateLabel>
+                    <DateLabel>DATE</DateLabel>
+                </Column1>
+
+                <PostElementContainer>
+                    <Divider />
+                    </PostElementContainer>
+                <Divider/>
+
+                <ColumnBottom>
+                    <PageContainer>
+                            {/* <PageButton /> */}
+                    </PageContainer>
+                    {!props.isDoctor && <WriteButton to={'./Newpost'}>Write A New Post</WriteButton>}
+                </ColumnBottom>
+
+            </PostContainer>
+        </Main>
+
+
+
+    
+
   );
 };
 
