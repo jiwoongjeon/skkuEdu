@@ -3,18 +3,15 @@ import { Link } from "react-router-dom";
 
 
 export const MenuDrop = styled.div`
-    visiblity:hidden;
-    opacity:0;
-
+    opacity: 0;
     display: flex;
     transition: .2s ease-in-out;
     position: absolute;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top : 240px;
-
+    margin-top: 300px;
     width: 100%;
-    height: 170px;
+    height: 200px;
 
     background-color: rgba(0, 68, 131, 0.75);
 
@@ -23,16 +20,15 @@ export const MenuDrop = styled.div`
 export const Container = styled.nav`
   width: 100%;
   margin: 0 auto;
-
-  height: 70px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex: 0 0 auto;
   z-index: 1000;
-  &:hover  ${MenuDrop}{
-        visiblity:visible;
-        opacity:1;
+
+  &:hover ${MenuDrop}{
+      opacity:1;
     }
 `;
 
@@ -57,19 +53,17 @@ export const Title = styled.p`
   @media only screen and (max-width: 1200px) {
     font-size: var(--font-size-5);
   }
-
   @media only screen and (max-width: 960px) {
     font-size: var(--font-size-3);
   }
 `;
 
 export const Logo = styled.img`
+  margin-left: 20px;
   @media screen and (max-width: 960px) {
     max-width: 32px;
   }
 `;
-
-
 
 export const MenuBox= styled.div`
     display: flex;
@@ -90,13 +84,9 @@ export const MenuContent = styled(Link)`
 
 `;
 
-
 export const MenuDiv = styled.div`
-
-    width:60%;
-    display:flex;
-
-
+  width:60%;
+  display:flex;
 `;
 
 export const MenuItem = styled(Link)`

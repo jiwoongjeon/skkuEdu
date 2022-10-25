@@ -1,14 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-
 import Home from "./views/Home";
-
 import About from "./views/About";
-
 import About_Members from "./views/About_Members";
-
 import KNSSE from "./views/KNSSE";
-import Board from "./views/Board";
+import Board1 from "./components/Board1"
+import Board2 from "./components/Board2"
+import LogIn from "./views/LogIn/index";
 import PostNewQuestion from "./views/PostNewQuestion";
 
 
@@ -17,8 +15,10 @@ const ROUTES = [
   { path: "/k-nsse", key: "K-NSSE", component: () => <KNSSE /> },
   { path: "/about/members", key: "members", component : () => <About_Members/>},
   { path: "/about", key: "ABOUT", component: () => <About /> },
-  { path: "/board/Newpost", key: "Newpost", component: () => <PostNewQuestion /> },
-  { path: "/board", key: "BOARD", component: () => <Board /> },
+  { path: "/board/Newpost", key: "NEWPOST", component: () => <PostNewQuestion /> },
+  { path: "/board1", key: "BOARD1", component: () => <Board1 /> },
+  { path: "/board2", key: "BOARD2", component: () => <Board2 /> },
+  { path: "/login", key: "LOGIN", component: () => <LogIn /> },
 ];
 
 export default ROUTES;

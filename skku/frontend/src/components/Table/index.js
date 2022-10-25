@@ -11,8 +11,6 @@ export const Title = styled.h1`
   font-size: var(--font-size-7);
 `;
 
-
-
 export const Row = styled.tr`
   border-bottom: 1px solid grey;
 `;
@@ -54,4 +52,3 @@ export const Button = styled.button`
     height: 50px;
   }
 `;
-

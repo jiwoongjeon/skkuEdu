@@ -1,8 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   max-width: 80%;
   margin: 10% auto;
+  display: flex
+  flex-direction: column;
 
   @media only screen and (max-width: 960px) {
     max-width: 90%;
@@ -11,6 +13,7 @@ export const Container = styled.div`
 
 export const Title = styled.p`
   color: black;
+  font-weight: bold;
   font-size: var(--font-size-8);
   margin-top: 0;
   user-select: none;
@@ -52,14 +55,15 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  width: 188px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
   justify-content: center;
-  background: black;
+  background: #212529;
   color: white;
-  font-size: var(--font-size-5);
+  font-size: var(--font-size-4);
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
+  cursor: pointer;
 
   @media only screen and (max-width: 960px) {
     font-size: var(--font-size-3);
@@ -71,6 +75,7 @@ export const Button = styled.button`
 export const SectionTitle = styled.p`
   margin-top: 20px;
   text-align: center;
+  font-weight: bold;
   font-size: var(--font-size-8);
   user-select: none;
 `;
@@ -78,13 +83,13 @@ export const SectionTitle = styled.p`
 export const SectionSubtitle = styled.p`
   text-align: center;
   font-size: var(--font-size-4);
-  text-decoration: overline #004383 solid 2px;
+  margin-top: 10px;
   margin-bottom: 50px;
   user-select: none;
+  // text-decoration: overline #004383 solid 2px;
 `;
 
 export const CardviewContainer = styled.div`
-  height: 510px;
   display: flex;
   flex-direction: row;
   justify-content: center;

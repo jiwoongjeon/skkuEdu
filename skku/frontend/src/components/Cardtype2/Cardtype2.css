@@ -1,18 +1,17 @@
 .cardview2-container{
-    width: 580px;
+    width: 500px;
     height: 380px;
     overflow: hidden;
     box-shadow: 0px 0px 5px -3px;
     transition: 0.5s;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     background-color: white;
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
-
-
 }
 
 .cardview2-container:hover{
@@ -25,12 +24,13 @@
 }
 
 .image2-container img{
-    margin-left: 35px;
+    /* margin-left: 35px;
     margin-top: 42.5px;
-    margin-bottom: 42.5px;
+    margin-bottom: 42.5px; */
     overflow: hidden;
     width: 230px;
     height: 290px;
+    /* flex: 1; */
     align-items: center;
     justify-content: center;
 
@@ -38,11 +38,17 @@
 
 .content2-container{
     margin-left: 25px;
+    margin-right: 25px;
     margin-top: 0.5rem;
     height: 225px;
-    width: 225px;
-    overflow: hidden;
+    flex: 2;
+    /* width: 225px; */
+    overflow: scroll;
     flex-direction: column;
+}
+
+.content p{
+    overflow: scroll;
 }
 
 h3, p{

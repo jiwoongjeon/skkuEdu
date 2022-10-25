@@ -7,6 +7,8 @@ import {
   ContentGroup,
   Subtext,
   Text,
+  LogInGroup,
+  LogInPage
 } from "./styles";
 
 const Footer = () => {
@@ -15,7 +17,7 @@ const Footer = () => {
       <Content>
         <ContentGroup>
           <Text>CONTACT</Text>
-          <Subtext>(03063) 서울특별시 종로구 성균관로 25-2 성균관대학교 호암관.</Subtext>
+          <Subtext>(03063) 서울특별시 종로구 성균관로 25-2 성균관대학교 호암관</Subtext>
           <Subtext>Tel. 02-740-1717</Subtext>
           <Subtext>E-mail. k-nsse@naver.com</Subtext>
         </ContentGroup>
@@ -25,7 +27,10 @@ const Footer = () => {
         </ContentGroup>
       </Content>
 
-      <Image src={logo} />
+      <LogInGroup>
+        <Image src={logo} />
+        <a href="/login"><LogInPage>Admin Sign In</LogInPage></a>
+      </LogInGroup>
     </Container>
   );
 };
