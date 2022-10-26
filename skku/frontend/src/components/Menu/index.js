@@ -17,7 +17,7 @@ import {
 } from "./styles";
 
 const Menu = () => {
-  const menuItems = ["About", "UICA", "K-NESSE","Research", "Board"];
+  const menuItems = ["About", "UICA", "K-NESSE", "Research", "Board"];
   const [width, setWidth] = useState(window.innerWidth);
   const [isOpen, setOpen] = useState(false);
   const updateDimensions = () => {
@@ -89,16 +89,16 @@ const Menu = () => {
                         <MenuContent to ="/uica/participate">Participate</MenuContent>
                     </MenuBox>
                     <MenuBox>
-                    <MenuContent to ="/board2/book">Book</MenuContent>
-                    <MenuContent to ="/board2/conference">Conference</MenuContent>
-                    <MenuContent to ="/board2/journal">Journal</MenuContent>
-                    <MenuContent to ="/board2/projects">Projects</MenuContent>
+                    <MenuContent to ="/board/download/book">Book</MenuContent>
+                    <MenuContent to ="/board/download/conference">Conference</MenuContent>
+                    <MenuContent to ="/board/download/journal">Journal</MenuContent>
+                    <MenuContent to ="/board/download/projects">Projects</MenuContent>
 
                 </MenuBox>
                 <MenuBox>
-                    <MenuContent to ="/board1/announcement">Announcement</MenuContent>
-                    <MenuContent to ="/board1/report">Report</MenuContent>
-                    <MenuContent to ="/board1/reference">Reference</MenuContent>
+                    <MenuContent to ="/board/detail/announcement">Announcement</MenuContent>
+                    <MenuContent to ="/board/detail/report">Report</MenuContent>
+                    <MenuContent to ="/board/detail/reference">Reference</MenuContent>
 
                 </MenuBox>
                 </MenuDrop>

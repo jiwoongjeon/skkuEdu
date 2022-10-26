@@ -4,21 +4,20 @@ import Home from "./views/Home";
 import About from "./views/About";
 import About_Members from "./views/About_Members";
 import KNSSE from "./views/KNSSE";
-import Board1 from "./components/Board1"
-import Board2 from "./components/Board2"
 import LogIn from "./views/LogIn/index";
 import PostNewQuestion from "./views/PostNewQuestion";
-
+import DetailBoard from "./components/DetailBoard";
+import DownloadBoard from "./components/DownloadBoard";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
   { path: "/k-nsse", key: "K-NSSE", component: () => <KNSSE /> },
   { path: "/about/members", key: "members", component : () => <About_Members/>},
   { path: "/about", key: "ABOUT", component: () => <About /> },
-  { path: "/board/Newpost", key: "NEWPOST", component: () => <PostNewQuestion /> },
-  { path: "/board1", key: "BOARD1", component: () => <Board1 /> },
-  { path: "/board2", key: "BOARD2", component: () => <Board2 /> },
-  { path: "/login", key: "LOGIN", component: () => <LogIn /> },
+  { path: "/Newpost", key: "NEWPOST", component: () => <PostNewQuestion /> },
+  { path: "/board/detail", key: "DETAIL", component: () => <DetailBoard /> },
+  { path: "/board/download", key: "DOWNLOAD", component: () => <DownloadBoard /> },
+  { path: "/login", key: "LOGIN", component: () => <LogIn /> }
 ];
 
 export default ROUTES;
