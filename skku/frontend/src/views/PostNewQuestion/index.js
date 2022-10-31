@@ -1,5 +1,5 @@
-import { Section, SectionPage, Members, Main, Hero } from "../../components";
-import {BoardNew} from "../BoardNew"
+import { Main, Hero } from "../../components";
+import {BoardNew} from "../../components/BoardNew"
 import background from "../../assets/images/mainbackground.png";
 
 

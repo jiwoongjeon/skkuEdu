@@ -1,13 +1,16 @@
 .cardview-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
     margin-left: 25px;
     margin-right: 25px;
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
     overflow: hidden;
-    box-shadow: 0px 0px 5px -3px;
+    box-shadow: 0px 2px 10px 0px #D8D8D8;
     transition: 0.5s;
     border-radius: 10px;
-
 }
 
 .cardview-container:hover{
@@ -16,6 +19,7 @@
 }
 
 .title{
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -28,8 +32,9 @@
 .content-container{
     margin: 1rem;
     margin-top: 0.5rem;
-    height: 120px;
+    height: 150px;
     overflow: hidden;
+    overflow-y: scroll;
 }
 
 h3, p{
@@ -40,15 +45,25 @@ h3, p{
 .btn{
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .btn button{
-    padding: 0.5rem;
-    background-color: white;
+    font-weight: bold;
+    padding: 15px;
+    background-color: transparent;
     border: none;
     transition: 0.2s;
 }
 
 .btn button:hover{
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 15px;
     background: rgba(27, 156, 252, 0.1);
+}
+
+button, a{
+    color: black;
+    text-decoration: none;
 }

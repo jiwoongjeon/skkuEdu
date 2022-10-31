@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Hamburger from "hamburger-react";
-
 import logo from "../../assets/images/logo.svg";
 import {
   Container,
@@ -18,7 +17,7 @@ import {
 } from "./styles";
 
 const Menu = () => {
-  const menuItems = ["About", "UICA", "K-NESSE","Research", "Board"];
+  const menuItems = ["About", "UICA", "K-NESSE", "Research", "Board"];
   const [width, setWidth] = useState(window.innerWidth);
   const [isOpen, setOpen] = useState(false);
   const updateDimensions = () => {
@@ -54,8 +53,7 @@ const Menu = () => {
               <MenuItem
                 key={i}
                 onClick={handleItemClick}
-                to={`/${elem.toLowerCase()}`}
-              >
+                to={`/${elem.toLowerCase()}`}>
                 {elem}
               </MenuItem>
             ))}
@@ -91,16 +89,16 @@ const Menu = () => {
                         <MenuContent to ="/uica/participate">Participate</MenuContent>
                     </MenuBox>
                     <MenuBox>
-                    <MenuContent to ="/research/book">Book</MenuContent>
-                    <MenuContent to ="/research/conference">Conference</MenuContent>
-                    <MenuContent to ="/research/journal">Journal</MenuContent>
-                    <MenuContent to ="/research/projects">Projects</MenuContent>
+                    <MenuContent to ="/board/download/book">Book</MenuContent>
+                    <MenuContent to ="/board/download/conference">Conference</MenuContent>
+                    <MenuContent to ="/board/download/journal">Journal</MenuContent>
+                    <MenuContent to ="/board/download/projects">Projects</MenuContent>
 
                 </MenuBox>
                 <MenuBox>
-                    <MenuContent to ="/board/announcement">Announcement</MenuContent>
-                    <MenuContent to ="/board/report">Report</MenuContent>
-                    <MenuContent to ="/board/reference">Reference</MenuContent>
+                    <MenuContent to ="/board/detail/announcement">Announcement</MenuContent>
+                    <MenuContent to ="/board/detail/report">Report</MenuContent>
+                    <MenuContent to ="/board/detail/reference">Reference</MenuContent>
 
                 </MenuBox>
                 </MenuDrop>
