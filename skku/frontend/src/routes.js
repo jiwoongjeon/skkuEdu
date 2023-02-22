@@ -8,6 +8,7 @@ import LogIn from "./views/LogIn/index";
 import PostNewQuestion from "./views/PostNewQuestion";
 import DetailBoard from "./components/DetailBoard";
 import DownloadBoard from "./components/DownloadBoard";
+import DetailPost from "./components/DetailPost";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
@@ -17,7 +18,8 @@ const ROUTES = [
   { path: "/Newpost", key: "NEWPOST", component: () => <PostNewQuestion /> },
   { path: "/board/detail", key: "DETAIL", component: () => <DetailBoard /> },
   { path: "/board/download", key: "DOWNLOAD", component: () => <DownloadBoard /> },
-  { path: "/login", key: "LOGIN", component: () => <LogIn /> }
+  { path: "/login", key: "LOGIN", component: () => <LogIn /> },
+  { path: "/postdetail", key: "POST", component: () => <DetailPost /> }
 ];
 
 export default ROUTES;
