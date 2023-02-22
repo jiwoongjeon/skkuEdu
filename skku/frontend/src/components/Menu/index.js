@@ -14,6 +14,7 @@ import {
   Title,
   MenuScreen,
   MenuScreenContainer,
+  DropContainer
 } from "./styles";
 
 const Menu = () => {
@@ -23,6 +24,7 @@ const Menu = () => {
   const updateDimensions = () => {
     setWidth(window.innerWidth);
   };
+
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
@@ -60,6 +62,7 @@ const Menu = () => {
           </MenuScreenContainer>
         )}
       </MenuScreen>
+
       <Container>
         <LogoLink to="/" onClick={handleItemClick}>
           <Logo src={logo} />
@@ -74,34 +77,38 @@ const Menu = () => {
               </MenuItem>
             ))}
           </MenuDiv>
-          <MenuDrop>
-                <MenuBox>
-                        <MenuContent to ="/about/organization">Organization</MenuContent>
+            <MenuDrop>
+              <DropContainer>
+                  <MenuBox>
+                      <MenuContent to ="/about/organization">Organization</MenuContent>
                         <MenuContent to ="/about/leader">Leader</MenuContent>
                         <MenuContent to ="/about/members">Members</MenuContent>
-                    </MenuBox>
-                    <MenuBox>
+                      </MenuBox>
+
+                      <MenuBox>
                         <MenuContent to ="/k-nsse/introduction">Introduction</MenuContent>
                         <MenuContent to ="/k-nsse/participate">Participate</MenuContent>
-                    </MenuBox>
-                    <MenuBox>
+                      </MenuBox>
+
+                      <MenuBox>
                         <MenuContent to ="/uica/introduction">Introduction</MenuContent>
                         <MenuContent to ="/uica/participate">Participate</MenuContent>
+                      </MenuBox>
+
+                      <MenuBox>
+                        <MenuContent to ="/board/download/book">Book</MenuContent>
+                        <MenuContent to ="/board/download/conference">Conference</MenuContent>
+                        <MenuContent to ="/board/download/journal">Journal</MenuContent>
+                        <MenuContent to ="/board/download/projects">Projects</MenuContent>
                     </MenuBox>
+
                     <MenuBox>
-                    <MenuContent to ="/board/download/book">Book</MenuContent>
-                    <MenuContent to ="/board/download/conference">Conference</MenuContent>
-                    <MenuContent to ="/board/download/journal">Journal</MenuContent>
-                    <MenuContent to ="/board/download/projects">Projects</MenuContent>
-
-                </MenuBox>
-                <MenuBox>
-                    <MenuContent to ="/board/detail/announcement">Announcement</MenuContent>
-                    <MenuContent to ="/board/detail/report">Report</MenuContent>
-                    <MenuContent to ="/board/detail/reference">Reference</MenuContent>
-
-                </MenuBox>
-                </MenuDrop>
+                      <MenuContent to ="/board/detail/announcement">Announcement</MenuContent>
+                      <MenuContent to ="/board/detail/report">Report</MenuContent>
+                      <MenuContent to ="/board/detail/reference">Reference</MenuContent>
+                  </MenuBox>
+                </DropContainer>
+              </MenuDrop>
                 </>
 
         ) : (
@@ -122,6 +129,7 @@ const Menu = () => {
       <Switch>
         <Route path="/"></Route>
       </Switch>
+
     </>
   );
 };

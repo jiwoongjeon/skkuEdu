@@ -15,16 +15,16 @@ export const LogIn = () => {
                     <Title>Admin Sign In</Title>
                 </Container>
 
-                {/* <LogInGroup> */}
+                <LogInGroup>
                     <Container>
                         <SectionTitle>ID</SectionTitle>
                         <TypeField />
                     </Container>
                     <Container>
-                        <SectionTitle>Pafssword</SectionTitle>
+                        <SectionTitle>Password</SectionTitle>
                         <TypeField />
                     </Container>
-                {/* </LogInGroup> */}
+                </LogInGroup>
                 
                 <SubContainer>
                     <Container>

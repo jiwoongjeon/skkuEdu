@@ -1,7 +1,8 @@
 import React from "react";
-import { InputLabel, MenuItem, FormControl, Select, TextField } from '@mui/material';
+import { InputLabel, MenuItem, FormControl, Select, TextField, Button, IconButton } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
-const { NewBoardContainer, Header, SubmitBtn, SubmitBtnDisabled, Row } = require('./styles')
+const { NewBoardContainer, Header, SubmitBtn, SubmitBtnDisabled, Row, AttachmentContainer, BtnContainer, AttachmentLabel } = require('./styles')
 
 
 export const BoardNew = ({ sendPost }) => {
@@ -58,6 +59,23 @@ export const BoardNew = ({ sendPost }) => {
             </Row>
 
             <Row>
+                <AttachmentContainer>
+                    <AttachmentLabel>
+                        No File Selected
+                    </AttachmentLabel>
+                    <BtnContainer>
+                        <Button variant="contained" component="label">
+                            Upload
+                            <input hidden accept="image/*" multiple type="file" />
+                        </Button>
+                        <Button variant="outlined" startIcon={<DeleteIcon />}>
+                            Delete
+                        </Button>
+                    </BtnContainer>
+                </AttachmentContainer>
+            </Row>
+
+            <Row>
                 <TextField
                     rows={20}
                     multiline
@@ -68,9 +86,9 @@ export const BoardNew = ({ sendPost }) => {
                     onChange={handleContent}
                 />
             </Row>
-            
+
             {button}
-        
+
         </NewBoardContainer>
 
     );
