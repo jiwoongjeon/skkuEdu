@@ -11,6 +11,7 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 20px 100px 20px 100px;
 `;
 
@@ -74,9 +75,37 @@ export const SubmitBtnDisabled = styled.button`
 
 export const SubmitBtn = styled(SubmitBtnDisabled)`
   cursor: pointer;
-  &:hover {
+  :hover {
     color: black;
     background: #A4C891;
   }
 `;
 
+export const BtnContainer = styled.div`
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+export const AttachmentContainer = styled.div`
+  width: 100%;
+  height: 150%;
+  padding: 0 1% 0 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid;
+  border-radius: 3px;
+  border-color: #BFBFBF;
+  :hover {
+    border-color: #3C3C3C;
+  }
+`;
+
+export const AttachmentLabel = styled.p`
+  color: #555555;
+  justify-self: self-start;
+`;

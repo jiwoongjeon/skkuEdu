@@ -1,20 +1,20 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
+export const DropContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`;
 
 export const MenuDrop = styled.div`
-    opacity: 0;
-    display: flex;
-    transition: .2s ease-in-out;
-    position: absolute;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 300px;
-    width: 100%;
-    height: 200px;
-
-    background-color: rgba(0, 68, 131, 0.75);
-
+  display: none;
+  transition: .2s ease-in-out;
+  position: absolute;
+  margin-top: 300px;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(0, 68, 131, 0.75);
 `;
 
 export const Container = styled.nav`
@@ -26,9 +26,10 @@ export const Container = styled.nav`
   justify-content: space-between;
   flex: 0 0 auto;
   z-index: 1000;
+  position: relative;
 
   &:hover ${MenuDrop}{
-      opacity:1;
+      display: block;
     }
 `;
 
@@ -87,6 +88,10 @@ export const MenuContent = styled(Link)`
 export const MenuDiv = styled.div`
   width:60%;
   display:flex;
+
+  :hover {
+
+  }
 `;
 
 export const MenuItem = styled(Link)`

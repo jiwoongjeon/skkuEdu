@@ -14,7 +14,7 @@ export const LogInContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 30%;
+    width: 25%;
     height: 80%;
     border-radius: 15px;
     background: #FFFFFF;
@@ -22,7 +22,11 @@ export const LogInContainer = styled.div`
 `;
 
 export const LogInGroup = styled.div`
-    gap: 50px;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
 `;
 
 export const Container = styled.div`
@@ -57,11 +61,14 @@ export const SectionTitle = styled(Title)`
     margin-right: 20px;
 `;
 
-export const TypeField = styled.div`
+export const TypeField = styled.textarea`
+    border: none;
     flex: 3;
     height: 30px;
-    border-radius: 20px;
+    line-height: 30px;
+    border-radius: 10px;
     background: #F4F5F5;
+    resize: none;
 `;
 
 export const SubmitBtn = styled.button`
