@@ -1,2 +1,10 @@
 db.sqlite3
 __pycache__/
+/node_modules
+/app/pw.js
+/app/awsKeys.js
+/app/fileUpload
+/app/fileUpload/router
+/app/fileDownload
+/app/aws/awsconfig.json
+/app/aws/awsKeys.js
